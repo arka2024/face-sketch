@@ -4,8 +4,8 @@ import os
 from sketch_utils import convert_to_sketch, detect_faces  # Fixed import path
 
 # Initialize directories
-if not os.path.exists("outputs"):  # Fixed colon (was semicolon)
-    os.makedirs("outputs")  # Fixed typo in function name
+if not os.path.exists("outputs"):  
+    os.makedirs("outputs")  
 
 def main():
     # Initialize webcam

@@ -1,7 +1,7 @@
 import cv2
 
 def convert_to_sketch(img):
-    """Convert image to pencil sketch"""
+
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     inverted = 255 - gray
     blurred = cv2.GaussianBlur(inverted, (21, 21), 0)
@@ -10,7 +10,7 @@ def convert_to_sketch(img):
     return sketch
 
 def detect_faces(frame):
-    """Detect faces using Haar Cascade"""
+    # Load the Haar Cascade classifier for face detection
     face_cascade = cv2.CascadeClassifier(
         cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
     )
